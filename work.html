@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/work.css">
+    <title>my work</title>
+</head>
+<body>
+    <nav>
+        <img src="img/Portfolio_logo2.png">
+        <div class="hamburger classic toggle" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <ul class="navigation">
+            <li><a href="index.html">meet michael</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="about.html">about michael</a></li>
+            <li><a href="work.html">my work</a></li>
+            <li><a href="contact.html">contact me</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="design">
+            <a href="designer.html">
+                <img src="img/hand-g6e058b02b_640 1.png">
+            </a>    
+            <h2>UI/UX Design Projects</h2>
+        </div>
+
+        <div class="frontend">
+            <a href="developer">
+                <img src="img/web-design-g07a5e3375_640 1.png">
+            </a>    
+            <h2>FrontEnd Projects</h2>
+        </div>
+
+        <div class="copy">
+            <a href="copywriting.html">
+                <img src="img/writer-g1208ba582_640 1.png">
+            </a>
+            <h2>Copywriting Projects</h2>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+        $(".hamburger").click(function(){
+        $(this).toggleClass("is-active");
+        });
+
+    </script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

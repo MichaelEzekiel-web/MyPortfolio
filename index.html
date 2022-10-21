@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Portfolio_logo.png">
+    <title>meet michael</title>
+    <link rel="stylesheet" href="css/Home.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="img/Portfolio_logo2.png"></div>
+        <div class="hamburger classic toggle" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+
+        <ul class="navigation">
+            <li><a href="index.html">meet michael</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="about.html">about michael</a></li>
+            <li><a href="work.html">my work</a></li>
+            <li><a href="contact.html">contact me</a></li>
+        </ul>
+    </nav>
+
+    <section class="main">
+        <div class="col-1">
+            <div class="description">
+                <div class="intro">
+                    <h4>Hello</h4>
+                    <h1>I'm Michael Ezekiel</h1>
+
+                    <a href="contact.html">
+                        <button class="Lets-talk">
+                            <p>Let's Talk</p>
+                            <ion-icon name="paper-plane-outline"></ion-icon>
+                            <!-- <img src="paper-plane-outline.svg"> -->
+                        </button> 
+                    </a>    
+                </div>
+                <div class="social-icons">
+                    <a href="https://facebook.com/MichaelEzekielweb">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="https://www.linkedin.com/in/michael-ezekiel-42861023a/">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                    <a href="https://twitter.com/Michael04_web">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="https://github.com/MichaelEzekiel-web">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>    
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="specs-con">
+                <div class="specs">
+                    <ion-icon name="laptop-outline" class="Frontend-icon"></ion-icon>
+                    <h2>Junior FrontEnd Developer</h2>
+                </div>
+                <div class="specs">
+                    <ion-icon name="clipboard-outline" class="copywriter-icon"></ion-icon>
+                    <h2>Copywriter</h2>
+                </div>
+                <div class="specs">
+                    <ion-icon name="square" class=".design-icon"></ion-icon>
+                    <h2>UI/UX Designer</h2>
+                </div>
+            </div>
+
+            <!-- <div class="circle"></div> -->
+      </div>
+    </section>
+
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs((slideIndex += n));
+        }
+
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("specs");
+        if (n > x.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "flex";
+        }
+        var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("specs");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {
+            slideIndex = 1;
+        }
+        x[slideIndex - 1].style.display = "flex";
+        setTimeout(carousel, 2000);
+        }
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+    </script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+        $(".hamburger").click(function(){
+        $(this).toggleClass("is-active");
+        });
+
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

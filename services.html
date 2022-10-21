@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Portfolio_logo.png">
+    <title>Services</title>
+    <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+    <nav>
+        <img src="img/Portfolio_logo2.png">
+        <div class="hamburger classic toggle" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <ul class="navigation">
+            <li><a href="index.html">meet michael</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="about.html">about michael</a></li>
+            <li><a href="work.html">my work</a></li>
+            <li><a href="contact.html">contact me</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="intro">
+            <h1>Services I Offer</h1>
+            <div class="goals">
+                <p>My goal is quite simple; to create excellent websites/ apps that make your business shine and my ego soar.</p>
+            </div>
+        </div>
+        <div class="services">
+            <div class="field">
+                <h1>UI/UX Design</h1>
+                <p>I create usable design interfaces which include mobile apps, web apps design, and website design</p>
+                <div class="explore">
+                    <h3>Explore</h3>
+                    <a href="#">
+                        <img src="img/Services-icon.png">
+                    </a>
+                </div>
+            </div>
+
+            <div class="field">
+                <h1>FrontEnd Developer</h1>
+                <p>The designs are applied to code to create quality websites, web apps, and templates</p>
+                <div class="explore">
+                    <h3>Explore</h3>
+                    <a href="#">
+                        <img src="img/Services-icon.png">
+                    </a>    
+                </div>
+            </div>
+
+            <div class="field">
+                <h1>Copywriter</h1>
+                <p>I also do some writing projects. Making copies for your website pages , ad campaigns or  to get your business going</p>
+                <div class="explore">
+                    <h3>Explore</h3>
+                    <a href="#">
+                        <img src="img/Services-icon.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+        $(".hamburger").click(function(){
+        $(this).toggleClass("is-active");
+        });
+
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

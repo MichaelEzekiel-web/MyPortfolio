@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .hamburger {
+        display: none;
+        float: right;
+        transform: scale(var(--hamburger-scale));
+        width: 50px;
+        cursor: pointer;
+    }
+    .con>a{
+        float: right;
+        display: block;
+    }
+@media (max-width: 500px) {
+    .hamburger{
+        display:block;
+    }
+    .con>a{
+        display: none;
+    }
+    
+}
+    .hamburger .line {
+        width: 50px;
+        height: 5px;
+        background-color: #000;
+        display: block;
+        margin: 8px auto;
+        transition: all 0.3s ease-in-out;
+    }
+
+.classic.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.classic.is-active .line:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+
+.classic.is-active .line:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+
+</style>
+<body>
+    <div class="con">
+    <div class="hamburger classic" >
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+    <a href="#">home</a>
+    <a href="#">home</a>
+    <a href="#">home</a>
+    <a href="#">home</a>
+    <a href="#">home</a>
+    </div>
+
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script>
+
+        $(".hamburger").click(function(){
+        $(this).toggleClass("is-active");
+        });
+
+    </script>
+</body>
+</html>
